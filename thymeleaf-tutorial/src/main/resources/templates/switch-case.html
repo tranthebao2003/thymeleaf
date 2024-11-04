@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Case"</title>
+</head>
+<body>
+<h1>Switch Case ThymeLeaf Attribute Demo:</h1>
+<h3 th:text="${user.name}"></h3>
+<div th:switch="${user.role}">
+    <p th:case="'ADMIN'"> User is a Admin User</p>
+    <p th:case="'USER'">User is normal User</p>
+<!-- * nó giống defaults trong switch-cae   -->
+    <p th:case="*">User is something else</p>
+</div>
+</body>
+</html>

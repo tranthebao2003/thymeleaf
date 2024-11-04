@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Link expression</title>
+<!-- /css/css2/demo.css: dấu / chỉ thư mục gốc là static rồi từ thư mục này
+   mỗi lần / là đi vào thư mục con-->
+    <link rel="stylesheet" th:href="@{/css/css2/demo.css}">
+    <link rel="stylesheet" th:href="@{/css/css2/css3/demo3.css}">
+</head>
+<body>
+<h1>Link Expressions Demo:</h1>
+<a th:href="@{/variable-expression}">variable-expression</a>
+<a th:href="@{/selection-expression}">selection-expression</a>
+<p><a th:href="@{/link-expression/(id=${id})}">link with parameter</a></p>
+</body>
+</html>
